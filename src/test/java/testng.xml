@@ -1,0 +1,17 @@
+<suite name="Headless Test Suite">
+    <!-- <test name="Headless Chrome Test">
+        <packages>
+            <package name="part2.com.saucedemo" />
+            <package name="part3_4.com.demoqa">
+                <exclude name=".*" />
+            </package>
+        </packages>
+    </test> -->
+
+    <test name="BasicTests">
+        <classes>
+            <class name="test.java.part2.com.saucedemo.tests.login.LoginTests"/>
+            <class name="test.java.part2.com.saucedemo.tests.products.ProductsTest"/>
+        </classes>
+    </test>
+</suite>
