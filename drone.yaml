@@ -4,6 +4,6 @@ name: run-tests
 
 steps:
   - name: test
-    image: maven:3.8.4-openjdk-17
+    image: maven:3.9.9-openjdk-21
     commands:
-      - mvn clean test
+      - mvn clean test 
