@@ -2,7 +2,7 @@ kind: pipeline
 type: docker
 name: run-tests
 identifier: YAML_first_ex ## A unique Id for the pipeline.
-projectIdentifier: default ## Specify the project this pipeline belongs to.
+projectIdentifier: default_project ## Specify the project this pipeline belongs to.
 orgIdentifier: default ## Specify the organization this pipeline belongs to.
 
 steps:
