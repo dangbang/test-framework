@@ -13,6 +13,7 @@ stages:
       type: CI
       spec:
         cloneCodebase: true
+        connectorRef: github-connector-moi2
         execution:
           steps:
             - step:
