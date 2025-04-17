@@ -1,0 +1,9 @@
+pipeline:
+  name: Pipeline_autotest
+  identifier: Pipeline_autotest
+  tags: {}
+  template:
+    templateRef: pipeline_template
+    versionLabel: pipever1
+  projectIdentifier: ben_project1
+  orgIdentifier: default
