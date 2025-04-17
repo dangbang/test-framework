@@ -1,0 +1,26 @@
+kind: pipeline
+type: docker
+name: run-tests
+identifier: YAML_first_ex ## A unique Id for the pipeline.
+projectIdentifier: ben_project1 ## Specify the project this pipeline belongs to.
+orgIdentifier: default ## Specify the organization this pipeline belongs to.
+
+stages:
+  - stage:
+      name: Run Automation Tests
+      identifier: run_automation_tests
+      description: "Stage to run automation tests"
+      type: CI
+      spec:
+        cloneCodebase: true
+        connectorRef: github-connector-moi2
+        execution:
+          steps:
+            - step:
+                type: Run
+                name: Run Maven Tests
+                identifier: run_maven_tests_step
+                spec:
+                  shell: Bash
+                  command: |
+                    mvn clean test
