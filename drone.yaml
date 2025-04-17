@@ -2,21 +2,24 @@ kind: pipeline
 type: docker
 name: run-tests
 identifier: YAML_first_ex ## A unique Id for the pipeline.
-projectIdentifier: default_project ## Specify the project this pipeline belongs to.
+projectIdentifier: ben_project1 ## Specify the project this pipeline belongs to.
 orgIdentifier: default ## Specify the organization this pipeline belongs to.
 
 stages:
   - stage:
-      name: Maven Test Stage
-      identifier: maven_test_stage
+      name: Run Automation Tests
+      identifier: run_automation_tests
+      description: "Stage to run automation tests"
       type: CI
       spec:
+        cloneCodebase: true
         execution:
           steps:
             - step:
                 type: Run
                 name: Run Maven Tests
-                identifier: run_maven_tests
-                image: maven:3.9.9-openjdk-21
-                commands:
-                  - mvn clean test 
+                identifier: run_maven_tests_step
+                spec:
+                  shell: Bash
+                  command: |
+                    mvn clean test
